@@ -1,0 +1,36 @@
+$primary-color: lime;
+$sPad: 1em;
+@mixin flex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+nav {
+    background-color: #333;
+    color: $primary-color;
+    @include flex($justify: space-between);
+    padding: $sPad*2;
+    img {
+        width: 100px;
+    }
+    ul {
+        @include flex;
+        list-style-type: none;
+    }
+    a {
+        color: $primary-color;
+        padding: $sPad;
+        margin: $sPad;
+    }
+}
+/*
+*
+body
+header
+nav
+a
+img
+ul
+li
+a
+*/
