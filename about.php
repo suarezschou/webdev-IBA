@@ -1,12 +1,16 @@
-<header>
-    <a href="index.html"><img src="img/logo.svg" alt="Logo"></a>
-        <nav>
-            
-            <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-                <li><a href="#">Item 4</a></li>
-            </ul>
-        </nav>
-    </header> 
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PHP Intro about</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <?php
+    include 'nav.php';
+    ?>
+    <h1>About</h1>
+</body>
+</html>

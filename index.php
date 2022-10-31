@@ -1,29 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCSS testing page</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PHP Intro</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <?php
-    include "navigation.php";
+    include 'nav.php';
     ?>
+    <h1>Home</h1>
     <?php
-    $fname = "rgrgrg";
-    $lname = "tttt";
-    $age = 32234;
-
-    if(is_string()){
-        echo "<p>fsfes $fname!</p>";
-    }else{
-        echo "nonono";
-    }
+        $name = 'Nadia';
+        if (is_string($name)) {
+        echo "Hello, my name is $name!";
+            }else{
+            echo 'I have no name';
+        }
     ?>
-    <p>hello my is <?php echo $fname?> I am <?php echo $age ?> years old</p>
     
-   
+    <p>Hej mit navn er <?php echo $name?></p>
 </body>
 </html>
