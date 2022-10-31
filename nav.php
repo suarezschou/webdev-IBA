@@ -1,4 +1,5 @@
 <?php
+$curpage = basename ($_SERVER['PHP_SELF']);
 $curpage = basename ($_SERVER['PHP_SELF']); //Using the basename function and the superglobal §_SERVER because you can not use a style class directly since the class will be on all pages (all links will show as active) - instead an if statement has been used --> if the current page is contact.php the class will be shown as active. The $_SERVER is a super global variable which holds information about header, locations etc.?>
     <header>
         <nav>
