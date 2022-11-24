@@ -1,5 +1,6 @@
+import ReactDOM from 'react-dom/client';
 import React,{useEffect,useState} from "react";
-import Recipe from './recipe'
+import Recipe from './recipe';
 import './App.css';
 
 const App = () => {
@@ -12,10 +13,11 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [query,setQuery] =useState('chicken');
 
+  
   useEffect(() =>{
     getRecipes();
     console.log("effect only runs 1 time now");
-  }, [query]);
+  },[query]);
   
   const getRecipes = async () => {
     const response = await fetch(
@@ -24,6 +26,7 @@ const App = () => {
     const data = await response.json();
     setRecipes(data.hits);
     console.log(data.hits);
+    
   };
 
   const updateSearch = e => {
@@ -49,7 +52,9 @@ const App = () => {
         key={recipe.recipe.label} // to avoid re-rendering the whole thing we assing a key value
         title={recipe.recipe.label}
         calories={recipe.recipe.calories} 
-        image={recipe.recipe.image} />
+        image={recipe.recipe.image}
+        ingredients={recipe.recipe.ingredients}
+        />
       ))}
     </div>
   );
@@ -57,3 +62,10 @@ const App = () => {
 };
 
 export default App;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
